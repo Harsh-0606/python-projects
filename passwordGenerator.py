@@ -1,8 +1,6 @@
-from math import exp
 import random
 from  tkinter import *
-from tkinter import font
-import tkinter
+import pyperclip
 
 root=Tk()
 root.title("Password Generator")
@@ -21,15 +19,17 @@ def passwordGenerator():
     passwordLength=15
     store="qwertyuiopasdfghjklzxcvbnm1234567890!@#$%^&*()?"
     p = "".join(random.sample(store,passwordLength))
+    pyperclip.copy(p)
+    spam = pyperclip.paste()
     label.config(text=p)
-    # label.after(1,passwordGenerator)
 
 def closeWin(e):
     root.destroy()
 
 root.bind('<Escape>',lambda e: closeWin(e))
 buttonFont= ("Times New Roman", 10)
-button = tkinter.Button(root,text="Generate Password", command=passwordGenerator,pady=5,font=buttonFont,justify='center')
+button = Button(root,text="Generate Password", command=passwordGenerator,pady=5,font=buttonFont,justify='center')
 button.pack(expand=True)
 passwordGenerator()
 root.mainloop()
+
