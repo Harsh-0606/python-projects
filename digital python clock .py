@@ -4,7 +4,7 @@ import time
 
 #creating the window, naming it and setting the size
 app_window = Tk() 
-app_window.title("Digital Clock") 
+app_window.title("Digital Clock")  
 app_window.geometry("450x150") 
 app_window.minsize(300,90)
 app_window.resizable(1,1)

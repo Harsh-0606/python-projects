@@ -3,7 +3,7 @@ from math import exp
 import random
 from tkinter import *
 
-#making the window
+#making the window 
 root=Tk()
 root.title("Rock, Paper or Scrissors")
 root.geometry('500x280')

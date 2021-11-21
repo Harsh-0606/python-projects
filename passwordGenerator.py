@@ -3,7 +3,7 @@ import random
 from  tkinter import *
 import pyperclip
 
-#making window
+#making window 
 root=Tk()
 root.title("Password Generator")
 root.geometry("500x150")
